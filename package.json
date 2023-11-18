@@ -1,0 +1,31 @@
+{
+  "name": "william.js",
+  "version": "1.0.0",
+  "description": "A super simple npm package with lots of utilities.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npx ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdhdev/william.js.git"
+  },
+  "keywords": [
+    "easy",
+    "simple",
+    "util",
+    "utilities"
+  ],
+  "author": "William Harrison <william@williamharrison.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wdhdev/william.js/issues"
+  },
+  "homepage": "https://github.com/wdhdev/william.js#readme",
+  "dependencies": {
+    "md5-hex": "^5.0.0"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1"
+  }
+}
