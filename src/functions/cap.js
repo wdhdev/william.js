@@ -5,12 +5,12 @@
  * @param {boolean} ellipsis Whether or not to add an ellipsis to the end of the string
  * @returns {string} Capped string if the string is longer than the length
  * @example
-```
+import { cap } from "william.js";
+
 // With elipsis
 cap("Hello, world!", 5, true); // "Hello..."
 // Without elipsis
 cap("Hello, world!", 5, false); // "Hello"
-```
  */
 
 module.exports = function cap(str, length, ellipsis = true) {

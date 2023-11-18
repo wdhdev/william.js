@@ -5,9 +5,9 @@ const md5Hex = require("../util/md5Hex.js");
  * @param {string} email The email address to get the Gravatar of
  * @returns {string} Gravatar URL
  * @example
-```
+import { gravatar } from "william.js";
+
 gravatar("hello@example.com"); // https://gravatar.com/avatar/cb8419c1d471d55fbca0d63d1fb2b6ac
-```
  */
 
 module.exports = function gravatar(email) {
@@ -27,6 +27,7 @@ module.exports = function gravatar(email) {
  * 
  * @param {string} email The email address to validate
  * @returns {boolean} Whether or not the string is a valid email address
+ * @ignore
  */
 
 function validation(email) {
