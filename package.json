@@ -1,6 +1,6 @@
 {
   "name": "william.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A super simple npm package with lots of utilities.",
   "main": "src/index.js",
   "scripts": {
@@ -22,9 +22,6 @@
     "url": "https://github.com/wdhdev/william.js/issues"
   },
   "homepage": "https://github.com/wdhdev/william.js#readme",
-  "dependencies": {
-    "md5-hex": "^5.0.0"
-  },
   "devDependencies": {
     "ava": "^5.3.1"
   }
