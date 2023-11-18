@@ -1,18 +1,19 @@
 {
   "name": "william.js",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A super simple npm package with lots of utilities.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npx ava"
+    "test": "ava tests/functions.js tests/util.js",
+    "test-functions": "ava tests/functions.js",
+    "test-util": "ava tests/util.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wdhdev/william.js.git"
   },
   "keywords": [
-    "easy",
-    "simple",
+    "useful",
     "util",
     "utilities"
   ],
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/wdhdev/william.js/issues"
   },
-  "homepage": "https://github.com/wdhdev/william.js#readme",
+  "homepage": "https://william.js.org",
   "devDependencies": {
     "ava": "^5.3.1"
   }
