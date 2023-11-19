@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>william.js 1.2.0 | Documentation</title>
+  <title>william.js 1.2.1 | Documentation</title>
   <meta name='description' content='A super simple npm package with lots of utilities.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>william.js</h3>
-          <div class='mb1'><code>1.2.0</code></div>
+          <div class='mb1'><code>1.2.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -42,6 +42,16 @@
                   href='#gravatar'
                   class="">
                   gravatar
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#id'
+                  class="">
+                  id
                   
                 </a>
                 
@@ -79,6 +89,16 @@
               
                 
                 <li><a
+                  href='#removeduplicates'
+                  class="">
+                  removeDuplicates
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#uuid'
                   class="">
                   uuid
@@ -107,7 +127,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/2d28e6f26fa9686b55273f34778f5fe3f8636050/src/functions/cap.js#L17-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/functions/cap.js#L17-L32'>
       <span>src/functions/cap.js</span>
       </a>
     
@@ -213,7 +233,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/2d28e6f26fa9686b55273f34778f5fe3f8636050/src/functions/gravatar.js#L14-L25'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/functions/gravatar.js#L14-L25'>
       <span>src/functions/gravatar.js</span>
       </a>
     
@@ -292,12 +312,138 @@
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='id'>
+      id
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/functions/id.js#L37-L61'>
+      <span>src/functions/id.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>id(length: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, amount: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, alphabet: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>length</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>32</code>)</code>
+	    The length of the ID
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>amount</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>1</code>)</code>
+	    The amount of IDs to generate
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>alphabet</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;</code>)</code>
+	    The alphabet to use
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>)</code>:
+        A single ID or an array of IDs
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">import</span> { id } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;william.js&quot;</span>;
+
+<span class="hljs-title function_">id</span>();
+<span class="hljs-comment">//=&gt; &quot;w9Jjy2L0R8Jg0W0X7t0w9H5Q2Y9V1E0C&quot;</span>
+
+<span class="hljs-title function_">id</span>(<span class="hljs-number">5</span>);
+<span class="hljs-comment">//=&gt; &quot;w9Jjy&quot;</span>
+
+<span class="hljs-title function_">id</span>(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>);
+<span class="hljs-comment">//=&gt; [</span>
+<span class="hljs-comment">//=&gt;   &quot;w9Jjy&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;u5V5J&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;Q9T8l&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;B6T7Y&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;S4K4P&quot;</span>
+<span class="hljs-comment">//=&gt; ]</span>
+
+<span class="hljs-title function_">id</span>(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&quot;abc&quot;</span>);
+<span class="hljs-comment">//=&gt; [</span>
+<span class="hljs-comment">//=&gt;   &quot;bbaac&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;cbcca&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;abccb&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;cbcca&quot;,</span>
+<span class="hljs-comment">//=&gt;   &quot;acbab&quot;</span>
+<span class="hljs-comment">//=&gt; ]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='random'>
       random
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/2d28e6f26fa9686b55273f34778f5fe3f8636050/src/functions/random.js#L13-L25'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/functions/random.js#L13-L25'>
       <span>src/functions/random.js</span>
       </a>
     
@@ -390,7 +536,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/2d28e6f26fa9686b55273f34778f5fe3f8636050/src/util/getDirs.js#L14-L18'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/util/getDirs.js#L14-L22'>
       <span>src/util/getDirs.js</span>
       </a>
     
@@ -474,7 +620,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/2d28e6f26fa9686b55273f34778f5fe3f8636050/src/util/md5Hex.js#L20-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/util/md5Hex.js#L20-L40'>
       <span>src/util/md5Hex.js</span>
       </a>
     
@@ -556,12 +702,96 @@ util.<span class="hljs-title function_">md5Hex</span>(buffer);
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='removeduplicates'>
+      removeDuplicates
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/util/removeDuplicates.js#L12-L18'>
+      <span>src/util/removeDuplicates.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>removeDuplicates(arr: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to remove duplicates from
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The array without duplicates
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">import</span> { util } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;william.js&quot;</span>;
+
+util.<span class="hljs-title function_">removeDuplicates</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]);
+<span class="hljs-comment">//=&gt; [1, 2, 3, 4, 5, 6]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='uuid'>
       uuid
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/2d28e6f26fa9686b55273f34778f5fe3f8636050/src/functions/uuid.js#L23-L40'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/wdhdev/william.js/blob/b4154255a61634dc65fa1be10fcd5dcbaaf822af/src/functions/uuid.js#L23-L38'>
       <span>src/functions/uuid.js</span>
       </a>
     
@@ -588,7 +818,7 @@ util.<span class="hljs-title function_">md5Hex</span>(buffer);
           <div>
             <span class='code bold'>amount</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
             = <code>1</code>)</code>
-	    The amount of UUIDs to generate (defaults to 1)
+	    The amount of UUIDs to generate
 
           </div>
           
