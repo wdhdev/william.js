@@ -1,9 +1,10 @@
 name: GitHub Pages
 
 on:
-    # Only build on release as to not have documentation that is invalid for the current release.
-    release:
-        types: [created]
+    push:
+        branches: [main]
+        paths:
+            - "docs/**"
 
     workflow_dispatch:
 
