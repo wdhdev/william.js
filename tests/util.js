@@ -1,7 +1,13 @@
 const test = require("ava");
 
 // Import functions
+const getDirs = require("../src/util/getDirs");
 const md5Hex = require("../src/util/md5Hex");
+
+// Test getDirs
+test("getDirs", async t => {
+    t.deepEqual(await getDirs("./src"), ["functions", "util"]);
+})
 
 // Test md5Hex
 test("md5Hex", t => {

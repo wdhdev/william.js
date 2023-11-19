@@ -24,14 +24,12 @@ jobs:
                   node-version: "16.x"
                   registry-url: "https://registry.npmjs.org"
 
-            - run: npm install -g documentation
-
-            - run: documentation build src/index.js -f html --github -o docs
+            - run: npx documentation build src/index.js -f html --github -o docs
 
             - name: Commit
               run: |
                   git config --global user.email "bot@williamharrison.dev"
                   git config --global user.name "WDH-Bot"
                   git add docs/**
-                  git commit -m "feat: build docs"
+                  git commit -m "chore: build docs"
                   git push

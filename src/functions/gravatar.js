@@ -7,7 +7,8 @@ const md5Hex = require("../util/md5Hex.js");
  * @example
 import { gravatar } from "william.js";
 
-gravatar("hello@example.com"); // https://gravatar.com/avatar/cb8419c1d471d55fbca0d63d1fb2b6ac
+gravatar("hello@example.com");
+//=> "https://gravatar.com/avatar/cb8419c1d471d55fbca0d63d1fb2b6ac"
  */
 
 module.exports = function gravatar(email) {

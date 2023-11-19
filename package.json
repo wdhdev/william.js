@@ -1,9 +1,10 @@
 {
   "name": "william.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A super simple npm package with lots of utilities.",
   "main": "src/index.js",
   "scripts": {
+    "docs": "documentation build src/index.js -f html --github -o docs",
     "test": "ava tests/functions.js tests/util.js",
     "test-functions": "ava tests/functions.js",
     "test-util": "ava tests/util.js"
@@ -24,6 +25,7 @@
   },
   "homepage": "https://william.js.org",
   "devDependencies": {
-    "ava": "^5.3.1"
+    "ava": "^5.3.1",
+    "documentation": "^14.0.2"
   }
 }

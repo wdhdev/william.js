@@ -7,10 +7,11 @@
  * @example
 import { cap } from "william.js";
 
-// With elipsis
-cap("Hello, world!", 5, true); // "Hello..."
-// Without elipsis
-cap("Hello, world!", 5, false); // "Hello"
+cap("Hello, world!", 5, true);
+//=> "Hello..."
+
+cap("Hello, world!", 5, false);
+//=> "Hello"
  */
 
 module.exports = function cap(str, length, ellipsis = true) {

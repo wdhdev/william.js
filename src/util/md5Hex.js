@@ -5,7 +5,7 @@ const crypto = require("node:crypto");
 
 /**
  * 
- * @param {Uint8Array | string | ReadonlyArray<Uint8Array | string>} data Prefer buffers as they're faster to hash, but strings can be useful for small things.
+ * @param {Uint8Array | string | ReadonlyArray<Uint8Array | string>} data The data to hash
  * @returns {string} An MD5 hash of the input data
  * @example
 import fs from "node:fs";
@@ -13,7 +13,8 @@ import { util } from "william.js";
 
 const buffer = fs.readFileSync("unicorn.png");
 
-util.md5Hex(buffer); // 1abcb33beeb811dca15f0ac3e47b88d9
+util.md5Hex(buffer);
+//=> "1abcb33beeb811dca15f0ac3e47b88d9"
  */
 
 module.exports = function md5Hex(data) {
