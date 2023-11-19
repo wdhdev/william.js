@@ -12,6 +12,10 @@ await util.getDirs("./src");
  */
 
 module.exports = async function getDirs(path) {
+    // Errors
+    if(!path) throw new TypeError("No path was provided.");
+    if(typeof path !== "string") throw new TypeError("The provided path is not a string.");
+
     return (await fs.promises.readdir(path, { withFileTypes: true }))
         .filter((dirent) => dirent.isDirectory())
         .map((dirent) => dirent.name);

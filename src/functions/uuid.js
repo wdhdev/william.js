@@ -2,7 +2,7 @@ const randomUUID = require("crypto").randomUUID;
 
 /**
  * 
- * @param {number} amount The amount of UUIDs to generate (defaults to 1)
+ * @param {number} amount The amount of UUIDs to generate
  * @returns {string|string[]} A single UUID or an array of UUIDs
  * @example
 import { uuid } from "william.js";
@@ -34,7 +34,5 @@ module.exports = function uuid(amount = 1) {
         uuids.push(randomUUID());
     }
 
-    if(amount === 1) return uuids[0];
-
-    return uuids;
+    return amount === 1 ? uuids[0] : uuids;
 }

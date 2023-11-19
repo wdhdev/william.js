@@ -18,6 +18,9 @@ util.md5Hex(buffer);
  */
 
 module.exports = function md5Hex(data) {
+    // Errors
+    if(!data) throw new TypeError("No data was provided.");
+
     const hash = crypto.createHash("md5");
 
     const update = buffer => {
