@@ -29,8 +29,8 @@ jobs:
 
             - run: npm install
 
-            - name: Test Functions
+            - name: Test functions
               run: npm run test-functions
 
-            - name: Test Util
+            - name: Test util
               run: npm run test-util
