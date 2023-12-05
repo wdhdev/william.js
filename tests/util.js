@@ -19,5 +19,3 @@ test("md5Hex", t => {
 test("removeDuplicates", t => {
     t.deepEqual(removeDuplicates([1, 2, 3, 3, 4, 5, 5, 5, 6]), [1, 2, 3, 4, 5, 6]);
 })
-
-process.exit();
