@@ -60,3 +60,5 @@ test("uuid", t => {
     t.true(Array.isArray(uuids));
     t.is(uuids.length, 5);
 })
+
+process.exit();
