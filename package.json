@@ -1,6 +1,6 @@
 {
   "name": "william.js",
-  "version": "1.2.3",
+  "version": "1.2.2",
   "description": "A super simple npm package with lots of utilities.",
   "main": "src/index.js",
   "scripts": {
