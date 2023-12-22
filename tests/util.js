@@ -7,7 +7,7 @@ const removeDuplicates = require("../src/util/removeDuplicates");
 
 // Test getDirs
 test("getDirs", async t => {
-    t.deepEqual(await getDirs("./src"), ["functions", "util"]);
+    t.deepEqual(await getDirs("./src"), ["functions", "util", "validate"]);
 })
 
 // Test md5Hex

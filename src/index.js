@@ -6,7 +6,12 @@ module.exports = {
     util: {
         getDirs: require("./util/getDirs"),
         md5Hex: require("./util/md5Hex"),
-        removeDuplicates: require("./util/removeDuplicates"),
+        removeDuplicates: require("./util/removeDuplicates")
     },
-    uuid: require("./functions/uuid")
+    uuid: require("./functions/uuid"),
+    validate: {
+        discord: require("./validate/discord"),
+        email: require("./validate/email")
+    },
+    version: require("../package.json").version
 }
