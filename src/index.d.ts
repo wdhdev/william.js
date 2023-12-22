@@ -14,7 +14,9 @@ export const util: {
 
 // Validation methods
 export const validate: {
-    discord: typeof import("./validate/discord");
+    discord: {
+        webhook: typeof import("./validate/discord").webhook;
+    }
     email: typeof import("./validate/email");
 }
 
