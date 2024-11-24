@@ -15,5 +15,11 @@ test("discord", t => {
 // Test email
 test("email", t => {
     t.true(email("hello@example.com"));
-    t.false(email("hello world"));
+    t.true(email("hello@subdomain.example.com"));
+    t.false(email("@example"))
+    t.false(email("@example.com"))
+    t.false(email("hello"))
+    t.false(email("hello@"))
+    t.false(email("hello@.com"))
+    t.false(email("hello@example"))
 })

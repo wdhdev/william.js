@@ -1,4 +1,5 @@
 const md5Hex = require("../util/md5Hex.js");
+const validateEmail = require("../validate/email.js");
 
 /**
  * 
@@ -18,27 +19,8 @@ module.exports = function gravatar(email) {
     if(email.length <= 0) throw new Error("Email cannot be empty");
 
     // Validate email
-    if(!validation(email)) throw new Error("Email is not valid");
+    if(!validateEmail(email)) throw new Error("Email is not valid");
 
     // Return URL or hash
     return `https://gravatar.com/avatar/${md5Hex(email.toLowerCase().trim())}`;
-}
-
-/**
- * 
- * @param {string} email The email address to validate
- * @returns {boolean} Whether or not the string is a valid email address
- * @ignore
- */
-
-function validation(email) {
-    // Errors
-    if(email == null) throw new Error("Email cannot be null");
-    if(typeof email !== "string") throw new Error("Email must be a string");
-    if(email.length <= 0) throw new Error("Email cannot be empty");
-
-    // Regex
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    return regex.test(email);
 }
